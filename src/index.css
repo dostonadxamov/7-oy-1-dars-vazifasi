@@ -1,0 +1,284 @@
+/* red-hat-text-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/red-hat-text-v18-latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* red-hat-text-600 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/red-hat-text-v18-latin-600.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* red-hat-text-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Red Hat Text';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/red-hat-text-v18-latin-700.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+:root {
+  /* ================= Colors ================= */
+  /* Red */
+  --color-red: #c7380f;
+
+  /* Rose */
+  --color-rose-900: #260f08;
+  --color-rose-500: #87635a;
+  --color-rose-400: #ad8a85;
+  --color-rose-300: #caafa7;
+  --color-rose-100: #f5eeec;
+  --color-rose-50: #fcf8f6;
+
+  /* Green */
+  --color-green: #1ea575;
+
+  /* Black & White */
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* ================= Typography ================= */
+  /* Font family */
+  --font-primary: "Red Hat Text", sans-serif;
+
+  /* Font sizes */
+  --text-preset-1-size: 5.6rem;
+  /* 56px */
+  --text-preset-2-size: 2.4rem;
+  /* 24px */
+  --text-preset-3-size: 1.6rem;
+  /* 16px */
+  --text-preset-4-size: 1.4rem;
+  /* 14px */
+
+  /* Line heights (relative ratios) */
+  --text-preset-1-line-height: 1.29;
+  /* 72px / 56px */
+  --text-preset-2-line-height: 1.25;
+  /* 30px / 24px */
+  --text-preset-3-line-height: 1.5;
+  /* 24px / 16px */
+  --text-preset-4-line-height: 1.5;
+  /* 21px / 14px */
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 1.6rem;
+  background-color: var(--color-rose-50);
+  line-height: var(--text-preset-3-line-height);
+  color: var(--color-rose-900);
+  height: 100%;
+}
+
+html {
+  font-size: 65.5%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+img {
+  object-fit: cover;
+  display: flex;
+}
+
+
+
+
+
+.container {
+  width: 100%;
+  max-width: 1716px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 8.8rem;
+  padding-bottom: 8.8rem;
+  display: flex;
+  gap: 3.2rem;
+}
+
+
+.Dessert {
+  width: 100%;
+  min-width: 800px;
+}
+
+
+
+.YourCart {
+  width: 30%;
+  background-color: var(--color-white);
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.yourcart__title {
+  font-size: var(--text-preset-2-size);
+  line-height: var(--text-preset-2-line-height);
+  margin-bottom: 2.4rem;
+  color: var(--color-red);
+}
+
+.Dessert__title {
+  font-size: var(--text-preset-1-size);
+  line-height: var(--text-preset-1-line-height);
+  column-gap: 2.4rem;
+  row-gap: 3.2rem;
+}
+
+
+.dessert__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.4rem;
+
+}
+
+.price {
+  font-weight: 700;
+  font-size: var(--text-preset-3-size);
+  line-height: var(--text-preset-3-line-height);
+  color: var(--color-red);
+}
+
+.img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.btn {
+  border-radius: 999px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-family: inherit;
+  display: flex;
+  width: 160px;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.btn2 {
+  border-radius: 999px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-family: inherit;
+  display: flex;
+  width: 160px;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.card__add {
+  background-color: var(--color-white);
+  color: var(--color-red);
+  gap: 8px;
+  align-items: center;
+  border-color: var(--color-rose-400);
+  padding: 1.12rem 2.8rem;
+}
+
+
+.card__buttons {
+  margin-top: -22px;
+  position: relative;
+  z-index: 10;
+}
+
+.card__amount__buttons {
+  background-color: var(--color-red);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.plus {
+  color: var(--color-white);
+  background-color: var(--color-red);
+  border-radius: 50%;
+  display: flex;
+  padding: 1.3rem;
+  width: 1.75em;
+  height: 1.75em;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.number {
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: var(--text-preset-3-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width:1140px) {
+  .container {
+    flex-direction: column;
+  }
+
+
+
+}
+
+
+@media (max-width: 420px) {
+
+    .dessert__container {
+      display: grid;
+      grid-template-columns: 340px;
+      gap: 2.4rem;
+
+    }
+  }
